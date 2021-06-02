@@ -1,5 +1,5 @@
 module Slideable
-    HORIZONTAL_DIRS = [ [0, -1], [0, 1], [1, 0], [-1, 0]]
+    HORIZONTAL_DIRS = [ [0, -1], [0, 1], [1, 0], [-1, 0] ]
     DIAGONAL_DIRS = [ [-1, -1], [-1, 1], [1, -1], [1, 1] ]
 
 
@@ -34,8 +34,10 @@ module Slideable
             x, y = x + dx, y + dy
             new_pos = [x, y]
 
-            break if board.is_valid?(new_pos)
+            break unless board.is_valid?(new_pos)
 
+            #check empty
+            #check color
             new_move << new_pos
      
         end
