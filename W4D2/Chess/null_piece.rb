@@ -1,4 +1,4 @@
-class Piece
+class NullPiece
     def initialize
         
     end

@@ -1,6 +1,9 @@
+require_relative "piece.rb"
+
 class Board
-    def initialize(row)
-        @grid = Array.new(row) { Array.new(row) }
+    def initialize
+        @grid = Array.new(8) { Array.new(8) }
+        
     end
 
     def [](pos)
@@ -13,7 +16,9 @@ class Board
         @grid[x][y] = val
     end
 
-    def move_piece(color, start_pos, end_pos)
+    def move_piece(start_pos, end_pos)
+        raise "position is invalid" if self[start_pos] == nil
+
     end
 
 
