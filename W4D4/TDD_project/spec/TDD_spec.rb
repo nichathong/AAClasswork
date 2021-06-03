@@ -17,4 +17,12 @@ describe Array do
         end
     end
 
+    describe "#my_transpose" do
+        it "puts elements from the row into the column" do 
+            arrays = [ [0, 1, 2], [3, 4, 5],[6, 7, 8] ]
+            expect(arrays.my_transpose).to eq my_transpose([[0, 1, 2], [3, 4, 5], [6, 7, 8]])
+        end
+
+    end
+
 end

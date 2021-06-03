@@ -13,6 +13,7 @@
 
 # [1, 2, 1, 3, 3].uniq # => [1, 2, 3] 
 # Write your own version of this method called my_uniq; it should take in an Array and return a new array.
+require "byebug"
 class Array
 
     def my_uniq
@@ -33,6 +34,19 @@ class Array
             end
         end
         new_arr
+    end
+
+    def my_transpose
+        result = []
+        # debugger
+        (0...self.length).each do |row|
+            temp = []
+            (0...self.length).each do |col|
+                temp << self[col][row]
+            end
+            result << temp
+        end
+        result
     end
 
 end
