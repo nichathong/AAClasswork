@@ -13,3 +13,26 @@
 
 # [1, 2, 1, 3, 3].uniq # => [1, 2, 3] 
 # Write your own version of this method called my_uniq; it should take in an Array and return a new array.
+class Array
+
+    def my_uniq
+        new_arr = []
+        self.each do |el|
+            new_arr << el unless new_arr.include?(el)
+        end
+        return new_arr
+    end
+
+    def two_sum
+        new_arr = []
+        (0...self.length).each do |i|
+            (i+1...self.length).each do |j|
+                if self[i] + self[j] == 0
+                    new_arr << [i, j]
+                end
+            end
+        end
+        new_arr
+    end
+
+end
