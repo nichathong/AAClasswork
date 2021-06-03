@@ -20,9 +20,17 @@ describe Array do
     describe "#my_transpose" do
         it "puts elements from the row into the column" do 
             arrays = [ [0, 1, 2], [3, 4, 5],[6, 7, 8] ]
-            expect(arrays.my_transpose).to eq my_transpose([[0, 1, 2], [3, 4, 5], [6, 7, 8]])
+            expect(arrays.my_transpose).to eq( [[0, 3, 6],[1, 4, 7],[2, 5, 8]] )
         end
-
+    end
+    #price =    [4, 3, 1 , 0 , 5]
+    #day(index)  0  1  2   3   4
+    #                   [3,4]
+    describe "#stock_picker" do 
+        it "find the best pair" do 
+            array = [4, 3, 1, 0, 5]
+            expect(array.stock_picker).to eq([3, 4])
+        end
     end
 
 end
