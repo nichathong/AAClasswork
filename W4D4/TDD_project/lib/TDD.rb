@@ -51,13 +51,11 @@ class Array
 
     def stock_picker
         res = Hash.new { |h, k| h[k] = [] }
-
         (0...self.length).each do |i_1|
             (i_1+1...self.length).each do |i_2|
                 res[self[i_1] - self[i_2]] += [i_1, i_2]
             end
         end
-
         sorted = res.sort_by { |k, v| k }
         sorted[0][-1]  
     end
