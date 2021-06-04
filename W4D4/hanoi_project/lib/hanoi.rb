@@ -1,6 +1,9 @@
 class TowerOfHanoi
+    attr_reader :base
+
     def initialize
-        @base = Array.new(3) { Array.new(6) }
+        @base = [ [1,2,3],[],[] ]
+
     end
-    
+  
 end
