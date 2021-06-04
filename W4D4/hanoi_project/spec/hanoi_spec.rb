@@ -15,8 +15,7 @@ describe TowerOfHanoi do
     describe "#move_disc" do
         it "prints 'get input from user' " do 
             
-        end
-        
+
         it "get input from user, by #gets" do 
             (move).to recieve(:gets).and_return([move]) 
         end
