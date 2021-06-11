@@ -60,22 +60,22 @@ require 'byebug'
 
 # Discuss the time complexity of this solution.
 
-def largest_contiguous_subsum(array)
-    largest_sum = 0
+# def largest_contiguous_subsum(array)
+#     largest_sum = 0
 
-    (0...array.length).each do |i|
-        (0...array.length).each do |j|
-            sum = array[i...(i+j)].sum
-            if largest_sum < sum
-                largest_sum = sum
-            end    
-        end
-    end
-    largest_sum
+#     (0...array.length).each do |i|
+#         (0...array.length).each do |j|
+#             sum = array[i...(i+j)].sum
+#             if largest_sum < sum
+#                 largest_sum = sum
+#             end    
+#         end
+#     end
+#     largest_sum
 
-end
+# end
 
-p largest_contiguous_subsum([1, 2, -4, 4, -3, 4]) # # this O(n^2) or polynomial because the function iterate through twice which rely on the size of the input and takes all the possibility of the result. The sumation is just a constant so we drop it.
+# p largest_contiguous_subsum([1, 2, -4, 4, -3, 4]) # # this O(n^2) or polynomial because the function iterate through twice which rely on the size of the input and takes all the possibility of the result. The sumation is just a constant so we drop it.
 
 # Phase II
 # Let's make a better version. Write a new function using O(n) time with O(1) memory. Keep a running tally of the largest sum. To accomplish this efficient space complexity, consider using two variables. One variable should track the largest sum so far and another to track the current sum. We'll leave the rest to you.
@@ -83,8 +83,8 @@ p largest_contiguous_subsum([1, 2, -4, 4, -3, 4]) # # this O(n^2) or polynomial 
 def largest_contiguous_subsum(array)
     current_sum = array.first
     largest_sum = array.first
-    (0...array.length).each do |i|
-        current_sum += array[i]
+    array.each do |num|
+        current_sum += num
         if largest_sum < current_sum
             largest_sum = current_sum
         end
@@ -94,3 +94,4 @@ end
 
 # p largest_contiguous_subsum([5, 3, -7]) #using o(n) because only iterate once and the other operations are just addion or concat....
 p largest_contiguous_subsum([1, 2, -4, 4, -3, 4])
+p largest_contiguous_subsum([1, 5, -8, 4, -6, 1, 9])
