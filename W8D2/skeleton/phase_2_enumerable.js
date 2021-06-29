@@ -50,8 +50,8 @@ Array.prototype.myReduce = function(callback, initialValue) {
     return acc;
 };
 
-function add(acc, ele) {
-    return acc + ele;
-};
+// function add(acc, ele) {
+//     return acc + ele;
+// };
 
-console.log(arr.myReduce(add));
+// console.log(arr.myReduce(add));
