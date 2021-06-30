@@ -18,4 +18,22 @@ Array.prototype.bubbleSort = function () {
 };
 
 arr = [5,22,5,12,1,9,4,345];
-console.log(arr.bubbleSort());
+// console.log(arr.bubbleSort());
+
+String.prototype.substrings = function() {
+  const subs = [];
+  let letters = this.split("");
+  
+  letters.forEach((ele, idx) => {
+    let str = ele;
+    for (let i = idx + 1; i < letters.length; i++) {
+      str = str.concat(letters[i]);
+      subs.push(str);
+    }
+  });
+
+  return subs;
+}
+
+
+// console.log('academy'.substrings());
